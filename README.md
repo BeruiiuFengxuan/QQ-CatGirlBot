@@ -40,7 +40,7 @@ pip install -r requirements.txt
   "llm": {
     "base_url": "https://api.openai.com/v1",     // 可换成 DeepSeek / 混元 / 本地 Ollama 等任意 OpenAI 兼容地址
     "api_key": "你的APIKey",
-    "model": "agnes-2.0-flash",        // 本项目默认 Agnes AI；也可换 agnes-image-2.1-flash（识图）等
+    "model": "agnes-2.0-flash",        // 本项目默认 Agnes AI
     "temperature": 0.8,
     "max_tokens": 800,
     "timeout": 60
