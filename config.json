@@ -1,0 +1,23 @@
+{
+  "qq": {
+    "appid": "你的AppID",
+    "secret": "你的AppSecret"
+  },
+  "llm": {
+    "base_url": "https://api.openai.com/v1",
+    "api_key": "你的APIKey",
+    "model": "agnes-2.5-flash",
+    "temperature": 0.8,
+    "max_tokens": 800,
+    "timeout": 60
+  },
+  "bot": {
+    "knowledge_dir": "knowledge",
+    "knowledge_top_k": 3,
+    "max_context_chars": 4000,
+    "reply_all_messages": true,
+    "memory_hours": 12,
+    "max_memory_turns": 20,
+    "review_enabled": true
+  }
+}
