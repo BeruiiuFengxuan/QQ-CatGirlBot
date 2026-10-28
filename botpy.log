@@ -131,3 +131,25 @@
 2026-08-28 19:53:09,657	[INFO]	(gateway.py:85)on_message	[botpy] 机器人「果娘酱」启动成功！
 2026-08-28 19:53:09,658	[INFO]	(gateway.py:223)_send_heart	[botpy] 心跳维持启动...
 2026-08-28 19:53:09,658	[INFO]	(client.py:53)on_ready	robot 果娘酱 on_ready!
+2026-10-28 19:08:42,449	[INFO]	(client.py:201)on_group_message_create	group full-message mode active: group=G
+2026-10-28 19:08:42,458	[INFO]	(client.py:201)on_group_message_create	group full-message mode active: group=G
+2026-10-28 19:09:14,827	[INFO]	(client.py:201)on_group_message_create	group full-message mode active: group=G
+2026-10-28 19:09:14,827	[INFO]	(client.py:201)on_group_message_create	group full-message mode active: group=G
+2026-10-28 22:19:40,771	[WARNING]	(client.py:556)_send_moderation_warning	markdown moderation warning failed, fallback to text: markdown not supported
+2026-10-28 22:19:40,774	[WARNING]	(client.py:556)_send_moderation_warning	markdown moderation warning failed, fallback to text: markdown not supported
+2026-10-28 22:20:33,041	[WARNING]	(client.py:563)_send_moderation_warning	markdown moderation warning failed, fallback to text: markdown not supported
+2026-10-28 22:20:33,042	[WARNING]	(client.py:563)_send_moderation_warning	markdown moderation warning failed, fallback to text: markdown not supported
+2026-10-28 22:20:41,841	[INFO]	(client.py:203)on_group_message_create	group full-message mode active: group=G
+2026-10-28 22:20:41,841	[INFO]	(client.py:203)on_group_message_create	group full-message mode active: group=G
+2026-10-28 22:20:42,439	[WARNING]	(client.py:563)_send_moderation_warning	markdown moderation warning failed, fallback to text: markdown not supported
+2026-10-28 22:20:42,443	[WARNING]	(client.py:563)_send_moderation_warning	markdown moderation warning failed, fallback to text: markdown not supported
+2026-10-28 22:21:32,529	[WARNING]	(client.py:563)_send_moderation_warning	markdown moderation warning failed, fallback to text: markdown not supported
+2026-10-28 22:21:32,542	[WARNING]	(client.py:563)_send_moderation_warning	markdown moderation warning failed, fallback to text: markdown not supported
+2026-10-28 22:21:40,697	[WARNING]	(client.py:563)_send_moderation_warning	markdown moderation warning failed, fallback to text: markdown not supported
+2026-10-28 22:21:40,712	[WARNING]	(client.py:563)_send_moderation_warning	markdown moderation warning failed, fallback to text: markdown not supported
+2026-10-28 22:22:31,465	[WARNING]	(client.py:570)_send_moderation_warning	markdown moderation warning failed, fallback to text for 300s: markdown not supported
+2026-10-28 22:22:31,469	[WARNING]	(client.py:570)_send_moderation_warning	markdown moderation warning failed, fallback to text for 300s: markdown not supported
+2026-10-28 22:22:57,228	[INFO]	(client.py:203)on_group_message_create	group full-message mode active: group=G
+2026-10-28 22:22:57,228	[INFO]	(client.py:203)on_group_message_create	group full-message mode active: group=G
+2026-10-28 22:22:57,828	[WARNING]	(client.py:570)_send_moderation_warning	markdown moderation warning failed, fallback to text for 300s: markdown not supported
+2026-10-28 22:22:57,842	[WARNING]	(client.py:570)_send_moderation_warning	markdown moderation warning failed, fallback to text for 300s: markdown not supported

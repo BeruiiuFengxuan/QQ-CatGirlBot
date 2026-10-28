@@ -15,9 +15,55 @@
     "knowledge_dir": "knowledge",
     "knowledge_top_k": 3,
     "max_context_chars": 4000,
-    "reply_all_messages": true,
+    "reply_all_messages": false,
     "memory_hours": 12,
     "max_memory_turns": 20,
     "review_enabled": true
+  },
+  "moderation": {
+    "enabled": true,
+    "rules_file": "moderation/rules.txt",
+    "log_dir": "moderation/logs",
+    "recall": true,
+    "warn_cooldown_seconds": 30,
+    "max_log_chars": 500,
+    "min_keyword_length": 2,
+    "mention_member": true,
+    "enabled_categories": [],
+    "warning_template": "喵呜～{mention}的消息含有【{category}】内容（触发词：{keyword}），猫猫已经记录警告啦！请遵守群规，再犯可能会被管理员请出群哦～",
+    "group_rules_mode": "replace",
+    "group_rules_dir": "moderation/groups",
+    "group_rules": {},
+    "join_review": {
+      "_note": "下面是示例标准答案，请把问题和答案替换成你群里的真实内容；group_standard_answers 里的“请替换成真实群OpenID”也要替换或删除。",
+      "enabled": false,
+      "request_member_intent": true,
+      "mode": "suggest",
+      "approve_score": 70,
+      "auto_decline": false,
+      "standard_answers": [
+        {
+          "question": "为什么想加群？",
+          "answer": "喜欢 Minecraft，想和大家一起玩"
+        }
+      ],
+      "group_standard_answers_mode": "replace",
+      "group_standard_answers": {
+        "请替换成真实群OpenID": [
+          {
+            "question": "为什么想加群？",
+            "answer": "喜欢 Minecraft，想一起玩生存/建筑，会遵守群规"
+          }
+        ]
+      },
+      "criteria": "1. 回答是否认真、完整，是否明显敷衍、复制粘贴或答非所问。\n2. 是否出现广告、辱骂、涉黄、引战、开盒、诈骗、拉人等风险内容。\n3. 入群意图是否明确、友善，是否符合本群的主题和交流氛围。\n4. 如果回答信息不足，应倾向于「人工复核」，不要武断通过。",
+      "reject_reason": "抱歉喵，入群验证没有通过，请认真回答管理员的问题后重新申请～",
+      "decline_blacklist": false,
+      "notify_group_openid": "",
+      "max_answer_chars": 2000,
+      "max_log_chars": 1000,
+      "temperature": 0.2,
+      "max_tokens": 500
+    }
   }
 }

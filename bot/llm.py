@@ -1,7 +1,8 @@
 import base64
 import json
-import urllib.request
 import ssl
+import urllib.error
+import urllib.request
 
 
 IMAGE_MAX_BYTES = 15 * 1024 * 1024
@@ -76,8 +77,29 @@ def call_llm(messages, config):
     ctx = ssl.create_default_context()
     timeout = int(cfg.get("timeout", 60))
 
-    with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
-        raw = resp.read().decode("utf-8")
+    try:
+        with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
+            raw = resp.read().decode("utf-8")
+    except urllib.error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", "replace")[:500]
+        raise RuntimeError(
+            "大模型接口返回 HTTP %s：%s（接口：%s）" % (exc.code, detail, url)
+        ) from exc
+    except urllib.error.URLError as exc:
+        reason = getattr(exc, "reason", exc)
+        raise RuntimeError(
+            "无法连接大模型接口 %s：%s。请检查 config.json 的 llm.base_url、"
+            "网络、代理和防火墙设置" % (url, reason)
+        ) from exc
+    except TimeoutError as exc:
+        raise RuntimeError(
+            "连接大模型接口超时：%s。可以调大 config.json 的 llm.timeout" % url
+        ) from exc
 
-    result = json.loads(raw)
-    return result["choices"][0]["message"]["content"].strip()
+    try:
+        result = json.loads(raw)
+        return result["choices"][0]["message"]["content"].strip()
+    except (ValueError, KeyError, IndexError, TypeError) as exc:
+        raise RuntimeError(
+            "大模型接口返回格式异常：%s" % raw[:300]
+        ) from exc
